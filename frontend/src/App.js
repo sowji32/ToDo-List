@@ -110,6 +110,7 @@ function App() {
       <div className="container p-4">
         <div className="formgrp d-flex gap-3 mb-3">
           <input
+            id='title_1'
             className="form-control"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -117,6 +118,7 @@ function App() {
             type="text"
           />
           <input
+          name='des'
             className="form-control"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -124,11 +126,11 @@ function App() {
             type="text"
           />
           {isEditing ? (
-            <button className="btn btn-warning" onClick={updateitem}>
+            <button  className="btn btn-warning" onClick={updateitem}>
               Update
             </button>
           ) : (
-            <button className="btn btn-info" onClick={funsubmit}>
+            <button name='click' className="btn btn-info" onClick={funsubmit}>
               Submit
             </button>
           )}
